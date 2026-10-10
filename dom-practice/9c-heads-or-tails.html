@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>DOM - Document Object Model</title>
+</head>
+
+<body>
+  <button class="js-heads-button"
+  onclick="headsButtonClick();"
+  >heads</button>
+
+  <button class="js-tails-button"
+  onclick="tailsButtonClick();"
+  >tails</button>
+  
+  <p class="js-playerMove"></p>
+  <script>
+   function headsButtonClick (){
+    document.querySelector('.js-playerMove')
+      .innerHTML = 'You chose: heads'; 
+   }
+    function tailsButtonClick (){
+    document.querySelector('.js-playerMove')
+      .innerHTML = 'You chose: tails';  
+    }
+   
+  </script>
+</body>
+
+</html>
