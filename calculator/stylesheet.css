@@ -1,0 +1,25 @@
+body{
+  background-color: black;
+}
+button{
+  background-color: rgb(55, 53, 53);
+  color: white;
+  border: none;
+ /*padding: 10px 15px;
+  border-radius: 50%;*/
+  height: 35px;
+  width: 35px;
+  font-size: 14px;
+  border-radius: 50%
+}
+.operator{
+  background-color: rgb(240, 173, 40);
+  font-size: 18px;
+}
+.clear-button{
+  font-size: 9px;
+  padding: 10px 5px;
+}
+.js-calculation{
+  color: white;
+}
