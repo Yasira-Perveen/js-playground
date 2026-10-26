@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>lesson 11 Exercises</title>
+
+</head>
+
+<body>
+  <script>
+    function minMax(array) {
+      const result = {
+        min: null,
+        max: null 
+      };
+      for (let i = 0; i < array.length; i++) {
+        const value = array[i];
+
+        if ( result.min === null || value < result.min) {
+          result.min = value; // here now min is no longer null now it has become  the 1st number of array
+        }
+      
+        if (  result.max === null ||value > result.max) {
+          result.max = value;
+        }
+      }
+      return result;
+    }
+    console.log(minMax([1, -3, 5]));
+    console.log(minMax([-2, 3, -5, 7, 10]));
+
+    console.log(minMax([]));
+    console.log(minMax([3]));
+
+  </script>
+</body>
+
+</html>
