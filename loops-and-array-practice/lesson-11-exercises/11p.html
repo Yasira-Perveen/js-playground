@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Lesson 11 Loops and Arrays</title>
+</head>
+
+<body>
+  <script>
+   
+     function stringSearch(arraySearch) {
+      let index = -1; 
+      for (let i = 0; i < arraySearch.length; i++) {
+        const string = arraySearch[i];
+        if (string === 'search') {
+         index = i ;
+         break;
+        }
+      }
+        console.log(index);
+    }
+       stringSearch(['hello', 'world', 'search', 'good','search']);
+  </script>
+</body>
+
+</html>
