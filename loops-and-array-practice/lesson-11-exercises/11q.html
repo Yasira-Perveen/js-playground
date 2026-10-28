@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Lesson 11 Loops and Arrays</title>
+</head>
+
+<body>
+  <script>
+    function findIndex (array,word){
+       let index = -1;
+      for(let i=0 ; i<array.length; i++){
+        const string = array[i];
+        if (string === word){
+          index = i;
+          break;
+        }
+      }
+       console.log(index);
+    }
+      findIndex(['green','red','blue','red'],'red');
+      findIndex(['green','red','blue','red'],'yellow');
+     
+  </script>
+</body>
+
+</html>
