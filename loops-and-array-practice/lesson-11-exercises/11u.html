@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Lesson 11 Loops and Arrays</title>
+</head>
+
+<body>
+  <script>
+    
+    function removeEgg(array){
+      const array1 = array.slice();
+       const reverseArray = array1.reverse();
+       
+      let eggsremoved = 0 ;
+      const array2 = [];
+      for (let i=0; i<reverseArray.length; i++){
+        const string = reverseArray[i];
+
+        if(string === 'egg' && eggsremoved < 2){
+          eggsremoved ++;
+           continue;
+        }
+        else {
+          array2.push(string);
+        }
+      }
+         return array2.reverse();
+    }
+
+    console.log( removeEgg( ['egg', 'apple','egg', 'egg','ham']));
+    
+  </script>
+</body>
+
+</html>
