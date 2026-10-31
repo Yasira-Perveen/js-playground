@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Lesson 11 Loops and Arrays</title>
+</head>
+
+<body>
+  <script>
+    function findIndex(array, word) {
+      let index = -1;
+      for (let i = 0; i < array.length; i++) {
+        const string = array[i];
+        if (string === word) {
+          index = i;
+          break;
+        }
+      }
+      return index;
+    }
+    //console.log((findIndex['green','red','blue','red'],'red'));
+    //findIndex(['green','red','blue','red'],'yellow');
+
+    function unique(array) {
+      const uniqueArray = [];
+      for (let i = 0; i < array.length; i++) {
+        const string = array[i];
+
+        if (findIndex(uniqueArray, string) === -1) {
+          uniqueArray.push(string);
+        }
+      }
+      return uniqueArray;
+    }
+    console.log(unique(['green', 'red', 'blue', 'red']));
+
+  </script>
+</body>
+
+</html>
