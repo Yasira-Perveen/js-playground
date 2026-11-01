@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Lesson 12 Advanced Functions</title>
+</head>
+
+<body>
+  <button class="js-button" onclick="
+  renderMessage();
+  ">Add to Cart</button>
+  <p class="js-message"></p>
+  <script>
+    const messageElement = document.querySelector('.js-message');
+
+    let timeoutId;
+    function renderMessage() {
+      messageElement.innerText = 'Added';
+      clearTimeout(timeoutId);
+      //using clearTimeout to clear the previous timeout if the user clicks the button multiple times before the timeout is completed. This will prevent multiple timeouts from being set and ensure that the message is cleared after 2 seconds from the last click.
+
+      timeoutId = setTimeout(function () {
+        messageElement.innerText = '';
+      }, 2000);
+    }
+
+  </script>
+</body>
+
+</html>
