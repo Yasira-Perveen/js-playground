@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Lesson 12 advanced functions</title>
+</head>
+
+<body>
+    <button class="js-button">Click</button>
+  <script>
+    // alternative of onclick=" " atribute 
+    // .addEventListner 
+    // it is not just alternative but also  has some advantages over onclick 
+
+    const clickButtonAction = () =>{
+
+      console.log ('Clicked');
+    };
+    const buttonElement = document.querySelector('.js-button');
+    buttonElement.addEventListener('click',  clickButtonAction  );
+
+    // we use .removeEventListner to remove an addEventListner
+     // this removes the click listener, so the button does nothing now
+    
+     buttonElement.removeEventListener('click',clickButtonAction);
+    
+
+
+    
+    // functions are values which means we can save functions in variables
+      const function1 = function greeting(){
+        console.log('hello')
+      } ; // as we are saving a value(function)  in a variable so we need to put ; at the end
+    
+      // now we have saved function in a variable how to call it? the answer is we can simply call the variable in which we saved the function 
+
+      function1();
+
+      // Anonymous function 
+      // when we save the function in a variable the function name is not needed like in the above example function name *greeting* is not needed.the functions without names r called anonymous functions
+
+      // functions are values . what can we do with values? we can save them in objects for example this is how methods are formed
+       const object1 ={
+        num: 2,
+        fun: function(){
+          console.log('hello2');
+        }
+       };
+       // now as we have saved a function in an object how do we call it? 
+       // we call it with the property name by using dot notation like below
+        object1.fun(); 
+
+        // what else we can do with values?
+        // we can pass value to a function . this means we can pass a function through a parameter to another function for example
+         
+        function run (pram){
+          pram();
+        }
+         run(function(){
+          console.log('hello3')
+         }); // the function we pass is called callback function or callback
+        
+
+         // setTimeout function 
+         // this is a built in function that let us run a function in future .
+         // it gets two parameters the function and time . it get time in miliseconds 1000 miliseconds = 1 sec
+         // setTimeout function does not pause the execution of code it just set the timer for code inside it and let the next instruction run this is called Asynchronous
+         setTimeout( function(){
+          console.log('timeout')
+         },3000); // this will display timeout in console after 3 seconds
+
+         // setInterval this is another built in function . it also let us run a function in future but it will keeping running the function after specific interval we set for example
+          
+         setInterval(function(){
+            console.log('interval');
+          }, 3000); // it will run the function after every 3 seconds
+         
+
+          // looping through an array using .forEach 
+          // .forEach is a method of array
+          // it is a preferred way to loop through an array
+          [
+            'offer prayer',
+            'study',
+            'break'
+          ].forEach(function(value ,index){
+            console.log(index);
+            console.log(value);
+          });
+
+          //we have learnt about coninue; it let us skip one iteration , we can not use continue in forEach but  using return; will do the same thing as continue; 
+          // for example in the above array lets say we want to skip when the value is 'break'
+           [
+            'offer prayer',
+            'study',
+            'break'
+          ].forEach(function(value ,index){
+            if (value === 'break'){
+              return;
+            }
+            console.log(index);
+            console.log(value);
+          });
+
+          // Arrow functions 
+          // it is just a short way to write fumctions 
+          // arrow functions have some shortcuts while the regular dont have 
+
+          const arrowFunctin = () => {
+            console.log('hello 2');
+          }
+
+          arrowFunctin();
+
+          //shortcuts
+          
+          const arrow1Line = () => console.log(2+2);
+
+          arrow1Line();
+          
+  </script>
+</body>
+
+</html>
