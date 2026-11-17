@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Lesson 12</title>
+  </head>
+  <body>
+    <script>
+      function removeEgg(foods) {
+        return foods.filter((value, index) => {
+          if (value === "egg") {
+            return false;
+          } else {
+            return true;
+          }
+        });
+      }
+      console.log(removeEgg(["egg", "apple", "egg", "egg", "ham"]));
+
+      //shortcut
+      function removeEgg2(foods) {
+        return foods.filter((value) => value !== "egg");
+      }
+      console.log(removeEgg2(["egg", "apple", "egg", "egg", "ham"]));
+    </script>
+  </body>
+</html>
