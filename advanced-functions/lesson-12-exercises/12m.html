@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Lesson 12</title>
+  </head>
+  <body>
+    <script>
+      function addNumLong (array, num) {
+        return array.map((value, index) => {
+          return value + num;
+        });
+      }
+      console.log(addNum1([1, 3, 5], 1));
+      console.log(addNum1([2, 3, 5, 7, 10], 2));
+
+      // shortCut
+      const addNumShort = function (array, num) {
+        return array.map((value) => value + num);
+      };
+
+      console.log(addNumLong([1, 3, 5], 1));
+      console.log(addNumShort([2, 3, 5, 7, 10], 2));
+    </script>
+  </body>
+</html>
