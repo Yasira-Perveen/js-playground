@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Lesson 12</title>
+  </head>
+  <body>
+    <button class="js-button" onclick="
+    updateButton();
+    ">Start</button>
+
+    <button class="js-button1" onclick="
+  updateButton1();
+  ">Start</button>
+  <script>
+    //12c switching to arrow function
+    const buttonElement = document.querySelector('.js-button');
+    function updateButton() {
+      setTimeout( ()=> {
+        buttonElement.innerText = 'Finished!';
+      }, 1000
+      )
+    }
+
+    //12d switching to arrow function when passing a function a function
+    const buttonElement1 = document.querySelector('.js-button1');
+    function updateButton1() {
+      buttonElement1.innerText = 'Loading...';
+      setTimeout( ()=> {
+        buttonElement1.innerText = 'Finished!';
+      }, 1000
+      )
+    }
+
+    </script>
+  </body>
+</html>
