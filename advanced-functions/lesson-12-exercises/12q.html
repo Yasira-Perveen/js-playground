@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Lesson 12 Advanced Functions</title>
+  </head>
+
+  <body>
+    <button class="js-button">Start</button>
+    <button class="js-button1">Start</button>
+    <script>
+      //12c switching onclick to .addEventListener
+      const buttonElement = document.querySelector(".js-button");
+
+      /*function updateButton() {
+      setTimeout( ()=> {
+        buttonElement.innerText = 'Finished!';
+      }, 1000
+      )
+    }
+   buttonElement.addEventListener('click' ,updateButton);
+    */
+      buttonElement.addEventListener("click", () => {
+        setTimeout(() => {
+          buttonElement.innerText = "Finished!";
+        }, 1000);
+      });
+
+      //12d switching onclick to .addEventListener
+
+      const buttonElement1 = document.querySelector(".js-button1");
+
+      buttonElement1.addEventListener("click", () => {
+        buttonElement1.innerText = "Loading...";
+        setTimeout(() => {
+          buttonElement1.innerText = "Finished!";
+        }, 1000);
+      });
+    </script>
+  </body>
+</html>
